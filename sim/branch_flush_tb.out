@@ -1,0 +1,58 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x647ba6e153b0 .scope module, "tb_branch_flush" "tb_branch_flush" 2 4;
+ .timescale -9 -12;
+v0x647ba6e2a9b0_0 .var "ex_pc_src", 0 0;
+v0x647ba6e2aa80_0 .net "id_ex_flush", 0 0, L_0x647ba6e2ad60;  1 drivers
+v0x647ba6e2ab50_0 .net "if_id_flush", 0 0, L_0x647ba6e2ac50;  1 drivers
+S_0x647ba6e15540 .scope module, "dut" "branch_flush" 2 11, 3 1 0, S_0x647ba6e153b0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "ex_pc_src";
+    .port_info 1 /OUTPUT 1 "if_id_flush";
+    .port_info 2 /OUTPUT 1 "id_ex_flush";
+L_0x647ba6e2ac50 .functor BUFZ 1, v0x647ba6e2a9b0_0, C4<0>, C4<0>, C4<0>;
+L_0x647ba6e2ad60 .functor BUFZ 1, v0x647ba6e2a9b0_0, C4<0>, C4<0>, C4<0>;
+v0x647ba6e15770_0 .net "ex_pc_src", 0 0, v0x647ba6e2a9b0_0;  1 drivers
+v0x647ba6e2a7d0_0 .net "id_ex_flush", 0 0, L_0x647ba6e2ad60;  alias, 1 drivers
+v0x647ba6e2a890_0 .net "if_id_flush", 0 0, L_0x647ba6e2ac50;  alias, 1 drivers
+    .scope S_0x647ba6e153b0;
+T_0 ;
+    %vpi_call 2 18 "$dumpfile", "../sim/branch_flush_wave.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x647ba6e153b0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x647ba6e2a9b0_0, 0, 1;
+    %delay 20000, 0;
+    %vpi_call 2 23 "$display", "NO BRANCH/JUMP : ex_pc_src=%b if_id_flush=%b id_ex_flush=%b", v0x647ba6e2a9b0_0, v0x647ba6e2ab50_0, v0x647ba6e2aa80_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x647ba6e2a9b0_0, 0, 1;
+    %delay 20000, 0;
+    %vpi_call 2 28 "$display", "BRANCH/JUMP TAKEN : ex_pc_src=%b if_id_flush=%b id_ex_flush=%b", v0x647ba6e2a9b0_0, v0x647ba6e2ab50_0, v0x647ba6e2aa80_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x647ba6e2a9b0_0, 0, 1;
+    %delay 20000, 0;
+    %vpi_call 2 33 "$display", "BACK TO NORMAL : ex_pc_src=%b if_id_flush=%b id_ex_flush=%b", v0x647ba6e2a9b0_0, v0x647ba6e2ab50_0, v0x647ba6e2aa80_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x647ba6e2a9b0_0, 0, 1;
+    %delay 20000, 0;
+    %vpi_call 2 38 "$display", "ONE MORE FLUSH : ex_pc_src=%b if_id_flush=%b id_ex_flush=%b", v0x647ba6e2a9b0_0, v0x647ba6e2ab50_0, v0x647ba6e2aa80_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x647ba6e2a9b0_0, 0, 1;
+    %delay 20000, 0;
+    %vpi_call 2 43 "$display", "NORMAL AGAIN : ex_pc_src=%b if_id_flush=%b id_ex_flush=%b", v0x647ba6e2a9b0_0, v0x647ba6e2ab50_0, v0x647ba6e2aa80_0 {0 0 0};
+    %delay 20000, 0;
+    %vpi_call 2 47 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "../tb/tb_branch_flush.v";
+    "./../rtl/branch_flush.v";

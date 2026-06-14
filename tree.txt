@@ -1,0 +1,67 @@
+.
+├── rtl
+│   ├── alu.v
+│   ├── branch_flush.v
+│   ├── control.v
+│   ├── cpu_top.v
+│   ├── dmem.v
+│   ├── ex_stage.v
+│   ├── forwarding_unit.v
+│   ├── id_stage.v
+│   ├── if_stage.v
+│   ├── imem.v
+│   ├── load_stall.v
+│   ├── mem_stage.v
+│   ├── reg_file.v
+│   ├── sign_ext.v
+│   └── wb_stage.v
+├── sim
+│   ├── alu_tb.out
+│   ├── alu_wave.vcd
+│   ├── branch_flush_tb.out
+│   ├── branch_flush_wave.vcd
+│   ├── control_tb.out
+│   ├── control_wave.vcd
+│   ├── cpu_top_tb.out
+│   ├── cpu_top_wave.vcd
+│   ├── dmem_tb.out
+│   ├── dmem_wave.vcd
+│   ├── ex_stage_tb.out
+│   ├── ex_stage_wave.vcd
+│   ├── forwarding_unit_tb.out
+│   ├── forwarding_unit_wave.vcd
+│   ├── id_stage_tb.out
+│   ├── id_stage_wave.vcd
+│   ├── if_stage_tb.out
+│   ├── if_stage_wave.vcd
+│   ├── imem_tb.out
+│   ├── imem_wave.vcd
+│   ├── load_stall_tb.out
+│   ├── load_stall_wave.vcd
+│   ├── mem_stage_tb.out
+│   ├── mem_stage_wave.vcd
+│   ├── reg_file_tb.out
+│   ├── reg_file_wave.vcd
+│   ├── sign_ext_tb.out
+│   ├── sign_ext_wave.vcd
+│   ├── wb_stage_tb.out
+│   └── wb_stage_wave.vcd
+├── tb
+│   ├── tb_alu.v
+│   ├── tb_branch_flush.v
+│   ├── tb_control.v
+│   ├── tb_cpu_top.v
+│   ├── tb_dmem.v
+│   ├── tb_ex_stage.v
+│   ├── tb_forwarding_unit.v
+│   ├── tb_id_stage.v
+│   ├── tb_if_stage.v
+│   ├── tb_imem.v
+│   ├── tb_load_stall.v
+│   ├── tb_mem_stage.v
+│   ├── tb_reg_file.v
+│   ├── tb_sign_ext.v
+│   └── tb_wb_stage.v
+└── tree.txt
+
+4 directories, 61 files

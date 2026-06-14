@@ -1,0 +1,81 @@
+$date
+	Sun Jun 14 23:19:16 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_wb_stage $end
+$var wire 1 ! wb_write_enable $end
+$var wire 32 " wb_wdata [31:0] $end
+$var wire 5 # wb_rd [4:0] $end
+$var reg 32 $ mem_wb_alu_result [31:0] $end
+$var reg 32 % mem_wb_mem_data [31:0] $end
+$var reg 32 & mem_wb_pc4 [31:0] $end
+$var reg 5 ' mem_wb_rd [4:0] $end
+$var reg 1 ( mem_wb_reg_write $end
+$var reg 2 ) mem_wb_write_back_source [1:0] $end
+$scope module dut $end
+$var wire 32 * mem_wb_alu_result [31:0] $end
+$var wire 32 + mem_wb_mem_data [31:0] $end
+$var wire 32 , mem_wb_pc4 [31:0] $end
+$var wire 5 - mem_wb_rd [4:0] $end
+$var wire 1 ( mem_wb_reg_write $end
+$var wire 2 . mem_wb_write_back_source [1:0] $end
+$var wire 5 / wb_rd [4:0] $end
+$var wire 1 ! wb_write_enable $end
+$var reg 32 0 wb_wdata [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1100100 0
+b101 /
+b0 .
+b101 -
+b100101100 ,
+b11001000 +
+b1100100 *
+b0 )
+1(
+b101 '
+b100101100 &
+b11001000 %
+b1100100 $
+b101 #
+b1100100 "
+1!
+$end
+#20000
+b11001000 "
+b11001000 0
+b1 )
+b1 .
+#40000
+b100101100 "
+b100101100 0
+b10 )
+b10 .
+#60000
+b0 "
+b0 0
+b11 )
+b11 .
+#80000
+b1100100 "
+b1100100 0
+b111 #
+b111 /
+b111 '
+b111 -
+b0 )
+b0 .
+0!
+0(
+#120000

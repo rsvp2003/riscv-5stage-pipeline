@@ -1,0 +1,46 @@
+$date
+	Sun Jun 14 00:12:37 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_branch_flush $end
+$var wire 1 ! if_id_flush $end
+$var wire 1 " id_ex_flush $end
+$var reg 1 # ex_pc_src $end
+$scope module dut $end
+$var wire 1 # ex_pc_src $end
+$var wire 1 " id_ex_flush $end
+$var wire 1 ! if_id_flush $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0#
+0"
+0!
+$end
+#20000
+1!
+1"
+1#
+#40000
+0!
+0"
+0#
+#60000
+1!
+1"
+1#
+#80000
+0!
+0"
+0#
+#120000
